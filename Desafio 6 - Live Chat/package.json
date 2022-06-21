@@ -1,0 +1,17 @@
+{
+  "name": "desafio-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "rodrigo",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "moment": "^2.29.1",
+    "socket.io": "^4.4.1"
+  }
+}
