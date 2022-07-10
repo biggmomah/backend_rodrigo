@@ -32,3 +32,4 @@ if (MODE === 'CLUSTER') {
 }
 
 app.listen(PORT, () => console.log(`Running on port ${PORT}`));
+// console.log(MODE)

@@ -32,7 +32,7 @@ app.set('views', './src/views')
 // SERVER CONFIGURATION
 
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3030
 app.listen(PORT, (res, req) => {
     console.log('Server on port', PORT)
 })

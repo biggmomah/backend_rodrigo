@@ -6,7 +6,7 @@ const router = express.Router();
 router
     .route('/')
     .get((req, res) => {
-        res.render('index')
+        res.render('login')
     })
 
 router
@@ -27,28 +27,28 @@ router
         res.render('signup')
     })
 
-    .post(passport.authenticate('signup',{
+    .post(passport.authenticate('signup', {
         successRedirect: '/login',
-        failureRedirect: '/signup', 
+        failureRedirect: '/signup',
         passReqToCallback: true
     }))
-    /* .post((req, res) => {
-        const {email, password} = req.body
+/* .post((req, res) => {
+    const {email, password} = req.body
 
-        res.send({email, password})
+    res.send({email, password})
 
-        usuarios.push(req.body)
-        console.log(usuarios)
-    }) */
+    usuarios.push(req.body)
+    console.log(usuarios)
+}) */
 
 router
     .route('/login')
     .get((req, res) => {
         res.render('login')
     })
-    .post(passport.authenticate('login',{
-        successRedirect:'/profile', 
-        failureRedirect:'/login-error',
+    .post(passport.authenticate('login', {
+        successRedirect: '/profile',
+        failureRedirect: '/login-error',
         passReqToCallback: true
     }))
 
